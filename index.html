@@ -16,16 +16,16 @@
  <main>
     <img src="img/bag.png" alt="sacola de compras">
     <form action="">
-        <input type="text" placeholder="Digite o item que deseja adicionar"/>
-        <button>Salvar item</button>    
+        <input id="input-item" type="text" placeholder="Digite o item que deseja adicionar"/>
+        <button id="botao-adicionar">Salvar item</button>    
     </form>
     
     <ul>
         <h2>Lista de compras</h2>
         <hr />
         <li>
-            <div>
-                <div>
+            <div class="item-lista-container">
+                <div class="container-nome-compra">
                     <input type="checkbox" />
                     <p>Queijo Minas</p>
                 </div>
@@ -38,7 +38,7 @@
                     </button>
                 </div>
             </div>
-            <p>Segunda-feira (31/10/2022) às 08:34</p>
+            <p class="item-lista-texto">Segunda-feira (31/10/2022) às 08:34</p>
         </li>
     </ul>
  </main>
