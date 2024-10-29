@@ -140,3 +140,8 @@ ul {
     border-left: 2px solid var(--neutro);
     transform: rotate(-140deg);
 }
+
+.botao-acao {
+    background-color: transparent;
+    border: none;
+}
