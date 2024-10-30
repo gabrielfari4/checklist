@@ -109,6 +109,9 @@ ul {
 .item-lista-texto {
     font-size: 12px;
     line-height: 20px;
+    &::first-letter {
+        text-transform: capitalize;
+    }
 }
 
 .checkbox-input {
