@@ -1,6 +1,7 @@
 const item = document.getElementById('input-item');
 const salvarItemButton = document.getElementById('botao-adicionar');
 const lista = document.getElementById('lista-de-compras');
+const listaComprados = document.getElementById('lista-comprados');
 
 salvarItemButton.addEventListener('click', (event) => {
     event.preventDefault();
@@ -32,11 +33,16 @@ const addItem = () => {
     checkboxLabel.addEventListener('click', (event) => {
         const checkboxInput = event.currentTarget.querySelector('.checkbox-input');
         const customCheckbox = event.currentTarget.querySelector('.checkbox-customizado');
+        const itemTitle = event.currentTarget.closest('li').querySelector('#item-titulo');
 
         if (checkboxInput.checked) {
             customCheckbox.classList.add('checked');
+            itemTitle.style.textDecoration = 'line-through';
+            listaComprados.appendChild(listItem);
         } else {
             customCheckbox.classList.remove('checked');
+            itemTitle.style.textDecoration = 'none';
+            lista.appendChild(listItem);
         }
     })
 
@@ -50,6 +56,7 @@ const addItem = () => {
     itemNameContainer.appendChild(checkboxContainer);
     
     const itemName = document.createElement('p');
+    itemName.id = 'item-titulo';
     itemName.innerText = item.value;
     itemNameContainer.appendChild(itemName);
     
