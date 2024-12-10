@@ -106,7 +106,7 @@ ul {
     width: 100%;
 }
 
-.item-lista-texto {
+.item-texto-data {
     font-size: 12px;
     line-height: 20px;
     &::first-letter {
