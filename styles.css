@@ -147,6 +147,7 @@ ul {
 .botao-acao {
     background-color: transparent;
     border: none;
+    margin: .5vw;
 }
 
 .container-lista {

@@ -1,4 +1,5 @@
 import addDateTime from "./adicionarDataHora.js";
+import editItem from "./editarItem.js";
 import deleteItem from "./excluirItem.js";
 import verifyBoughtList from "./verificarComprado.js";
 
@@ -75,6 +76,9 @@ const createItem = (item) => {
     
     const editButton = document.createElement('button');
     editButton.classList.add('botao-acao');
+    editButton.addEventListener('click', () => {
+        editItem(listItem);
+    })
     buttonContainer.appendChild(editButton);
     
     const editImg = document.createElement('img');
