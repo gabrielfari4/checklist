@@ -1,3 +1,7 @@
+import addDateTime from "./adicionarDataHora.js";
+import verifyBoughtList from "./verificarComprado.js";
+
+const lista = document.getElementById('lista-de-compras');
 const listaComprados = document.getElementById('lista-comprados');
 
 let itemCount = 1
@@ -37,6 +41,7 @@ const createItem = (item) => {
             itemTitle.style.textDecoration = 'none';
             lista.appendChild(listItem);
         }
+        verifyBoughtList(listaComprados);
     })
 
     const customCheckbox = document.createElement('div');
@@ -74,15 +79,13 @@ const createItem = (item) => {
     editButton.appendChild(editImg);
     
     
+
     listItemContainer.appendChild(itemNameContainer);
     listItemContainer.appendChild(buttonContainer);
 
-    const itemDate = document.createElement('p');
-    itemDate.innerText = `${new Date().toLocaleDateString('pt-BR', { weekday: 'long' })} (${new Date().toLocaleDateString()}) às ${new Date().toLocaleTimeString('pt-BR', { hour: 'numeric', minute: 'numeric' })}`;
-    itemDate.classList.add('item-texto-data');
-
+    
     listItem.appendChild(listItemContainer);
-    listItem.appendChild(itemDate);
+    listItem.appendChild(addDateTime());
 
     return listItem;
 }
