@@ -1,4 +1,5 @@
 import addDateTime from "./adicionarDataHora.js";
+import deleteItem from "./excluirItem.js";
 import verifyBoughtList from "./verificarComprado.js";
 
 const lista = document.getElementById('lista-de-compras');
@@ -62,6 +63,9 @@ const createItem = (item) => {
     
     const deleteButton = document.createElement('button');
     deleteButton.classList.add('botao-acao');
+    deleteButton.addEventListener('click', () => {
+        deleteItem(listItem)
+    })
     buttonContainer.appendChild(deleteButton);
     
     const deleteImg = document.createElement('img');

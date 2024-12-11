@@ -1,7 +1,7 @@
 const emptyListMsg = document.getElementById('mensagem-lista-vazia');
 
 const verifyList = (list) => {
-    if (list.childElementCount === 0) {
+    if (list.querySelectorAll('li').length === 0) {
         emptyListMsg.style.display = "block";
     } else {
         emptyListMsg.style.display = "none";
