@@ -10,6 +10,8 @@ const addItem = (event) => {
     const listItem = createItem(item.value)
     lista.appendChild(listItem);
     verifyList(lista);
+    item.value = ''
+    item.focus()
 }
 
 export default addItem;

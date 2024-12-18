@@ -148,6 +148,7 @@ ul {
     background-color: transparent;
     border: none;
     margin: .5vw;
+    cursor: pointer;
 }
 
 .container-lista {
